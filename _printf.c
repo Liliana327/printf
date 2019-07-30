@@ -8,12 +8,16 @@
 int _printf(const char *format, ...)
 {
 	va_list arguments;
-	int n;
+	int n = 0;
 
 	va_start(arguments, format);
+
 	if (format == '\0')
 		return (-1);
+
 	n = case_lst(format, arguments);
+
 	va_end(arguments);
+
 	return (n);
 }

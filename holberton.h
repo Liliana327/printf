@@ -13,6 +13,6 @@ int _strlen(char *a);
 int _printf(const char *format, ...);
 int _putchar(char c);
 int _str_ptf(char *a);
-int case_lst(const char *format, va_list arguments);
+int case_lst(va_list arguments, const char *format);
 #endif /** _HOLBERTON_H_ */
 
