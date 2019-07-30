@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 	if (format == '\0')
 		return (-1);
 
-	n = case_lst(format, arguments);
+	n = case_lst(arguments, format);
 
 	va_end(arguments);
 
