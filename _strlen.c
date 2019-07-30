@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * _str_len - function that counts how much the chain measures
+ * _strlen - function that counts how much the chain measures
  * @a: pointer of a estring
  * Return: (0)
 */

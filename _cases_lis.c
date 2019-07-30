@@ -1,0 +1,23 @@
+#include "holberton.h"
+#include <stdarg.h>
+
+/**
+* _cases_lis - check cases
+* @arguments: arguments given
+* Return: characters printed
+*/
+int _cases_lis(va_list arguments)
+{
+	char *m;
+	int a = 0, n = 0;
+
+	m = va_arg(arguments, char*);
+	if (m == NULL)
+		m = "(NULL)";
+	for (a = 0; m[a] != '\0'; a++)
+	{
+		write(1, &m[a], 1);
+		n++;
+	}
+	return (n);
+}

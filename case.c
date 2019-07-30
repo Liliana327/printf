@@ -1,52 +1,49 @@
 #include <stdarg.h>
 #include "holberton.h"
-
 /**
 * case_lst - Evaluate the cases
 * @format: format
 * @arguments: arguments
 * Return: ()
 */
-
 int case_lst(const char *format, va_list arguments)
 {
-	int a = 0;
-	int n = 0;
-	char *m;
+	int a = 0, n = 0;
 
-	while (format[a] != '\0')
+	for (a = 0; format[a] != '\0'; a++)
 	{
-	if (format[a + 1] == '\0' && format[a] == '%')
-		return (n = -1);
-	else if (format[a] == '%')
+	if (format[a] == '%')
 	{
 		switch (format[a + 1])
 	{
 		case 'c':
 			_putchar(va_arg(arguments, int));
-			n++, a++;
+			a++;
 			break;
 		case 's':
-			m = va_arg(arguments, char *);
-			n += _cases_lis(m);
+			n += _cases_lis(arguments);
 			a++;
 			break;
 		case '%':
 			_putchar('%');
-			a++, n++;
+			a++;
+			break;
+		case '\0':
+			n = -2;
+			break;
+		case 'i':
+		case 'd':
+			n += _cases_num(arguments);
+			n--, a++;
 			break;
 		default:
-			_putchar(format[a]);
-			n++;
+			_putchar('%');
 			break;
-			}
-			a++;
+		}
 		}
 		else
 			_putchar(format[a]);
-			n++;
-			a++;
+		n++;
 }
-	va_end(arguments);
 	return (n);
 }
