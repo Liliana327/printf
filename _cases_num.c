@@ -1,5 +1,7 @@
 #include "holberton.h"
 #include <stdarg.h>
+#include <unistd.h>
+
 /**
 * _cases_num - check cases
 * @arguments: arguments given

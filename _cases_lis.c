@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdarg.h>
+#include <unistd.h>
 
 /**
 * _cases_lis - check cases
