@@ -1,33 +1,35 @@
-#include <stdarg.h>	
-#include <unistd.h>
 #include "holberton.h"
+#include <stdarg.h>
+
 /**
-* _printf - text.
-* @format: parameters.
-* Return: 0
+* _cases_lis - check cases
+* @m: array pointer
+* Return: arguments
+*/
+int _cases_lis(char *m)
+{
+	if (m != '\0')
+	{
+		_str_ptf(m);
+		return (_strlen(m));
+	}
+	else
+	{
+		_str_ptf("(null)");
+		return (_strlen("(null)"));
+	}
+}
+/**
+ * _printf - function to print strings and int
+ * @format: format
+ * Return: arguments
 */
 int _printf(const char *format, ...)
 {
-	int m = 0;
-	int a = 0;
 	va_list arguments;
-	
-	if (format)
-	va_start(arguments, format);
-	while (format[m])
-	{
-	if (format[m] == '%')
-	{
-	m++;
-	if (!format[m])
-	{
-	return (-1);
-	}
-	write(1, format + m++, 1);
-	a++;
-	}
-	return (a);
-	}
-	return (-1);
-}
 
+	va_start(arguments, format);
+	if (format == '\0')
+		return (-1);
+	return (case_lst(format, arguments));
+}
