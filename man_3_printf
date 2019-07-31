@@ -1,0 +1,47 @@
+.TH _printf "30 07 19" "version 1.0"
+.SH NAME
+_printf\-format and print data
+.SH SYNOPSIS
+.B #include "holberton.h"
+
+.B int _printf(const char *format, ...);
+
+.SH DESCRIPTION
+Produces output according to a format, write output to stdout, the standard otput stream.
+
+.SH RETURN VALUE
+Return the number of charactes printed, excluding the null byte used to endoutput strings.
+.SH CONVERSION SPECIFIER
+Tell the compiler what type of data is in a variable during takin output. Their meaning are:
+
+.TP
+\fBd\fR,\fBi\fR
+The argument is converted to a signed decimal notation.
+.TP
+\fBc\fR
+Implemented for representing characters, printing the character stored in a variable.
+.TP
+\fBs\fR
+Implemented for representing strings, printing a string stored in the character array variable.
+.TP
+\fB%\fR
+A '%' is written, no argument is converted. The complete conversion specification is '%%'.
+
+.SH SEE ALSO
+.B printf(3)
+
+.SH BUGS
+At the moment no bugs founded.
+
+.SH EXAMPLE
+Print the string "Print Holberton"
+
+#include "holberton.h"
+
+_printf("%s","Print Holberton");
+
+.SH AUTORS
+
+Liliana Ospina (894@holbertonschool.com), Juan Calle (878@holbertonschool.com).
+
+ 
