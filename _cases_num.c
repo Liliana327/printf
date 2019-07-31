@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
-* _printnumber - print a number
+* _cases_num - print a number
 * @arguments: argument give
 * Return: int
 */
