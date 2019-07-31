@@ -10,12 +10,10 @@ int case_c(va_list arguments, const char *format)
 	int a, n = 0;
 	char c;
 
-	for (a = 0; format[a]; a++)
+	for (a = 0; format[a] != '\0'; a++)
 	{
 		if (format[a] == '%')
 		{
-			if (!format[a])
-				return (-1);
 			switch (format[a + 1])
 			{
 				case 'c':
@@ -33,10 +31,8 @@ int case_c(va_list arguments, const char *format)
 					break;
 				case 'd':
 				case 'i':
-					n += _cases_num1(arguments), n--, a++;
-					break;
-				case 'R':
-					n += _cases_num2(arguments), n--, a++;
+					n += _cases_num(arguments);
+					n--, a++;
 					break;
 				default:
 					_putchar('%');
