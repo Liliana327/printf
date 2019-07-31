@@ -7,6 +7,8 @@
 #include <unistd.h>
 #include <string.h>
 int _cases_num(va_list arguments);
+int _cases_num1(unsigned int m, int a);
+int _cases_num2(va_list arguments);
 int _cases_lis(va_list arguments);
 int _printf(const char *format, ...);
 int _putchar(char c);

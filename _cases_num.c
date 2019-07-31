@@ -9,30 +9,22 @@
 */
 int _cases_num(va_list arguments)
 {
-	int num, a = 1, c = 0;
+	int num, c = 0;
 	unsigned int n;
-	char ch;
 
 	num = va_arg(arguments, int);
 
 	if (num < 0)
 	{
-		ch = '-';
-		c = c + write(1, &ch, 1);
-		n = -num;
+		n = num * -1;
+		putchar ('-');
+		c = _cases_num1(n, c);
+		c += 1;
 	}
 	else
-		n = num;
-
-	while (n / a > 9)
-		a *= 10;
-
-	while (a != 0)
 	{
-		ch = n / a + '0';
-		c = c + write(1, &ch, 1);
-		n = n % a;
-		a = a / 10;
+		n = num;
+		c = _cases_num1(n, c);
 	}
-	return (a);
+	return (c);
 }

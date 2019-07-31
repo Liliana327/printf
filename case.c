@@ -8,16 +8,19 @@
 */
 int case_lst(va_list arguments, const char *format)
 {
-	int a = 0, n = 0;
+	int a, n = 0;
+	char c;
 
 	for (a = 0; format[a] != '\0'; a++)
 	{
 		if (format[a] == '%')
 		{
+			if (!format[a])
+				return (-1);
 			switch (format[a + 1])
 			{
 				case 'c':
-					_putchar(va_arg(arguments, int));
+					c = va_arg(arguments, int), _putchar(c);
 					a++;
 					break;
 				case 's':
@@ -33,8 +36,7 @@ int case_lst(va_list arguments, const char *format)
 					break;
 				case 'd':
 				case 'i':
-					n += _cases_num(arguments);
-					n--, a++;
+					n += _cases_num(arguments), n--, a++;
 					break;
 				default:
 					_putchar('%');
@@ -42,8 +44,7 @@ int case_lst(va_list arguments, const char *format)
 			}
 		}
 		else
-			_putchar(format[a]);
-		n++;
+			_putchar(format[a]), n++;
 	}
 	return (n);
 }
