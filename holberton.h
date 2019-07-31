@@ -1,5 +1,5 @@
-#ifndef _HOLBERTON_H
-#define _HOLBERTON_H
+#ifndef _HOLBERTON_H_
+#define _HOLBERTON_H_
 
 #include <stdarg.h>
 
@@ -7,7 +7,7 @@
 
 #include <stdlib.h>
 
-#include <unistd.h> 
+#include <unistd.h>
 
 int _cases_num(va_list arguments);
 int _cases_lis(va_list arguments);

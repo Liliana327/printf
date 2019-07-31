@@ -6,12 +6,12 @@
 */
 int _printf(const char *format, ...)
 {
-	int n;
+	int n = 0;
 	va_list arguments;
 
 	va_start(arguments, format);
 
-	if (format == NULL)
+	if (format == 0)
 		return (-1);
 
 	n = case_c(arguments, format);
