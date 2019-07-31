@@ -1,14 +1,16 @@
 #include "holberton.h"
 /**
-* case_lst - Evaluate the cases
-* @format: format
-* @arguments: arguments
-* Return: ()
+* _cases_c - auxiliary function
+*
+* @arguments: argument list
+*
+* @format: types of arguments passed to the function
+*
+* Return: the number of characters printed
 */
-int case_c(va_list arguments, const char *format)
+int _cases_c(va_list arguments, const char *format)
 {
-	int a, n = 0;
-	char c;
+	int a = 0, ct = 0;
 
 	for (a = 0; format[a] != '\0'; a++)
 	{
@@ -17,22 +19,24 @@ int case_c(va_list arguments, const char *format)
 			switch (format[a + 1])
 			{
 				case 'c':
-					c = va_arg(arguments, int), _putchar(c);
+					_putchar(va_arg(arguments, int));
+					a++;
+					break;
+				case '%':
+					_putchar('%');
 					a++;
 					break;
 				case 's':
-					n += _cases_lis(arguments), n--, a++;
-					break;
-				case '%':
-					_putchar('%'), a++;
+					ct += _cases_lis(arguments);
+					ct--, a++;
 					break;
 				case '\0':
-					n = -2;
+					ct = -2;
 					break;
 				case 'd':
 				case 'i':
-					n += _cases_num(arguments);
-					n--, a++;
+					ct += _cases_num(arguments);
+					ct--, a++;
 					break;
 				default:
 					_putchar('%');
@@ -40,7 +44,8 @@ int case_c(va_list arguments, const char *format)
 			}
 		}
 		else
-			_putchar(format[a]), n++;
+			_putchar(format[a]);
+		ct++;
 	}
-	return (n);
+	return (ct);
 }

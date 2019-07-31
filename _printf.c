@@ -6,17 +6,17 @@
 */
 int _printf(const char *format, ...)
 {
-	int n = 0;
 	va_list arguments;
+	int ct = 0;
 
 	va_start(arguments, format);
 
 	if (format == 0)
 		return (-1);
 
-	n = case_c(arguments, format);
+	ct = _cases_c(arguments, format);
 
 	va_end(arguments);
 
-	return (n);
+	return (ct);
 }
