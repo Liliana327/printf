@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdarg.h>
 /**
  * _printf - function to print strings and int
  * @format: format
@@ -12,10 +11,10 @@ int _printf(const char *format, ...)
 
 	va_start(arguments, format);
 
-	if (format == '\0')
+	if (format == NULL)
 		return (-1);
 
-	n = case_lst(arguments, format);
+	n = case_c(arguments, format);
 
 	va_end(arguments);
 
