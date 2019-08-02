@@ -35,7 +35,7 @@ Your main file should look like this:
 
 The compile it and check output
 
-<img align="center" src="https://i.ibb.co/h2prMfG/result2.png" width="50%"/>  
+<img align="center" src="https://i.ibb.co/h2prMfG/result2.png" width="70%"/>  
 
 ---
 
