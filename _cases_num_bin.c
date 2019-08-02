@@ -1,8 +1,8 @@
 #include "holberton.h"
 /**
-* _cases_num_bin - print a unsigned int as bin                                                                                                                              * @arguments: argument given                                                                                                                                            * Return: counter as the amount of arguments prints                                                                                                                     */
-* @arguments: agument given
-* Return: counter as the amount of arguments printed
+* _cases_num_bin - print a unsigned int as bin 
+* @arguments: argument given 
+* Return: counter as the amount of arguments prints
 */
 int _cases_num_bin(va_list arguments)
 {
