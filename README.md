@@ -20,13 +20,23 @@ Here you will fine a function that represents a similar methodology for showing 
 First compile all project with a main program that allows you to invoke principal function _printf.c
 
 ```sh 
-$gcc -Wall -Wextra -Werror -pedantic -Wno-format *.c holberton.h -o <nameofexecutable>
+$gcc -Wall -Wextra -Werror -pedantic  *.c holberton.h -o <nameofexecutablefile>
 ```
 Besides that execute it for seein the output at shell
 
 ```sh 
 $./"nameofexecutable"
 ```
+## Example
+
+Your main file should look like this:
+
+<img align="center" src="https://i.ibb.co/cQMbsBK/main.png" width="30%"/>  
+
+The compile it and check output
+
+<img align="center" src="https://i.ibb.co/h2prMfG/result2.png" width="50%"/>  
+
 ---
 
 ## Authors
