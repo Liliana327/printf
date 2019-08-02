@@ -2,11 +2,11 @@
 /**
 * _cases_lis - check cases
 * @arguments: arguments given
-* Return: characters printed
+* Return: amount of characters printed
 */
 int _cases_lis(va_list arguments)
 {
-	int a = 0, ct = 0;
+	int a = 0, ct = 0; /* aux variables and ct as counter */
 	char *str;
 
 	str = va_arg(arguments, char*);
