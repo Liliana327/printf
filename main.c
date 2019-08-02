@@ -8,5 +8,5 @@
 */
 int main(void)
 {
-_printf("%b", 98);
+_printf("%b\n:", 98);
 }
