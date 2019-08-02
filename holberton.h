@@ -12,5 +12,6 @@ int _printf(const char *format, ...);
 int _cases_c(va_list arguments, const char *format);
 int _cases_lis(va_list arguments);
 int _cases_num(va_list arguments);
-
+int _cases_num_bin(va_list arguments;
+                   
 #endif /** _HOLBERTON_H_ */
