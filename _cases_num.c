@@ -1,12 +1,12 @@
 #include "holberton.h"
 /**
-* _cases_num - print a number
+* _cases_num - function that print a number
 * @arguments: argument give
-* Return: int
+* Return: counter of arguments printes
 */
 int _cases_num(va_list arguments)
 {
-	int num, a = 1, ct = 0;
+	int num, a = 1, ct = 0;	/* aux variables and ct as counter*/
 	unsigned int n;
 	char s;
 
