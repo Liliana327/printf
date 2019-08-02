@@ -38,13 +38,10 @@ int _cases_c(va_list arguments, const char *format)
 					ct += _cases_num(arguments);
 					ct--, a++;
 					break;
-				case 'b':
-					ct += _cases_num_bin(arguments);
-					ct--, a++;
-					break;
-                                case 'x': case 'X': case 'o': case 'u':
+				case 'b': case 'x': case 'X': case 'o': case 'u':
                                         ct += conversion(va_arg(arguments, unsigned int), format[a + 1]);
-                                        break;
+                                        ct--, a++;
+					break;
 				default:
 					_putchar('%');
 					break;
