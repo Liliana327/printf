@@ -10,7 +10,7 @@ int conversion(unsigned int num, char f)
 {
 	const char R1[] = "0123456789ABCDEF";
 	const char R2[] = "0123456789abcdef";
-	char aux[16];
+	char aux[16]; /* maximum of characters given by hexadecimal number */
 	int ct = 0; /* amount of arguments printed*/
 	int i, j, base;
 
