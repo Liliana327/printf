@@ -8,37 +8,34 @@
  */
 int conversion(unsigned int num, char f)
 {
-        const char R1[] = "0123456789ABCDEF";
-        const char R2[] = "0123456789abcdef";
-        char aux[300];
-        char *ptr;
-        int ct = 0; /* amount of arguments printed*/
-        int i, base;
+	const char R1[] = "0123456789ABCDEF";
+	const char R2[] = "0123456789abcdef";
+	char aux[16];
+	int ct = 0; /* amount of arguments printed*/
+	int i, j, base;
 
-        if (f == 'u')
-                base = 10;
-        if (f == 'o')
-                base = 8;
-        if (f == 'x' || f == 'X')
-                base = 16;
+	if (f == 'b')
+		base = 2;
+	if (f == 'u')
+		base = 10;
+	if (f == 'o')
+		base = 8;
+	if (f == 'x' || f == 'X')
+		base = 16;
 
-        ptr = &aux[300];
-        *ptr = '\0';
-
-        while(num != 0)
-        {
-                if (f == 'x')
-                        *--ptr = R2[num % base];
-                else
-                        *--ptr = R1[num % base];
-                num /= base;
-        }
+	for (i = 0; num > 0; i++)
+	{
+		if (f == 'x')
+			aux[i] = R2[num % base];
+		else
+			aux[i] = R1[num % base];
+		num /= base;
+	}
 
 
-        for (i = 0; ptr[i] != '\0'; i++)
-                ;
-
-        ct = i;
-        write(1, ptr, ct);
-        return (ct);
+	for (j = i - 1; j >= 0 ; j--)
+	{
+		ct = ct + _putchar(aux[j]);
+	}
+	return (ct);
 }
