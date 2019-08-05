@@ -12,6 +12,7 @@ Here you will fine a function that represents a similar methodology for showing 
 | _printf.c | first inlet of arguments evaluation  |
 | _case_c | function that evaluates which format its going to be used |
 | _cases_num.c , _cases_lis.c | Auxiliar functions for integers and string formats |
+| conversion.c | Function that allows conversion from unsigned int to bin, oct, dec and hex base|
 | holberton.h | header file that contains prototypes functions |
 | _putchar.c  | function that improves output from a system call to wirte data out of buffer |
 
