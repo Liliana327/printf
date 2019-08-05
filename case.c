@@ -19,16 +19,21 @@ int _cases_c(va_list arguments, const char *format)
 			switch (format[a + 1])
 			{
 				case 'c':
-					_putchar(va_arg(arguments, int)), a++, break;
+					_putchar(va_arg(arguments, int)), a++;
+					break;
 				case '%':
-					_putchar('%'), a++, break;
+					_putchar('%'), a++;
+					break;
 				case 's':
-					ct += _cases_lis(arguments), ct--, a++, break;
+					ct += _cases_lis(arguments), ct--, a++;
+					break;
 				case '\0':
-					ct = -2, break;
+					ct = -2;
+					break;
 				case 'd':
 				case 'i':
-					ct += _cases_num(arguments), ct--, a++, break;
+					ct += _cases_num(arguments), ct--, a++;
+					break;
 				case 'b': case 'x': case 'X': case 'o': case 'u':
 				ct += conversion(va_arg(arguments, unsigned int), format[a + 1]);
 					ct--, a++;
