@@ -22,8 +22,11 @@ int conversion(unsigned int num, char f)
 		base = 8;
 	if (f == 'x' || f == 'X')
 		base = 16;
-
-	for (i = 0; num >= 0; i++)
+	
+	if (num == 0)
+		return (ct = _putchar(R1[0]));
+		       
+	for (i = 0; num > 0; i++)
 	{
 		if (f == 'x')
 			aux[i] = R2[num % base];
