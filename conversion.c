@@ -23,7 +23,7 @@ int conversion(unsigned int num, char f)
 	if (f == 'x' || f == 'X')
 		base = 16;
 
-	for (i = 0; num > 0; i++)
+	for (i = 0; num >= 0; i++)
 	{
 		if (f == 'x')
 			aux[i] = R2[num % base];
