@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
  * _printf - function that clones printf program
- * @format: format 
+ * @format: format
  * Return: amount of arguments printed
 */
 int _printf(const char *format, ...)
