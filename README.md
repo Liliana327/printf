@@ -32,7 +32,7 @@ $./"nameofexecutable"
 
 Your main file should look like this:
 
-<img align="center" src="https://i.ibb.co/cQMbsBK/main.png" width="30%"/>  
+<img align="center" src="https://files.slack.com/files-pri/T0ENXA7A8-FMRUR8YKS/screen_shot_2019-08-26_at_11.11.54_am.png" width="30%"/>  
 
 The compile it and check output
 
